@@ -5,7 +5,7 @@
 import { Component } from 'react';
 
 import type { Node } from 'react';
-import type { FormField, Methods } from 'rn-fetch-blob';
+import type { FormField, Methods } from 'react-native-blob-util';
 import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet'
 
 export type AssetId = number;
@@ -32,8 +32,7 @@ export type TableContent = {
 };
 
 export type Props = {
-  activityIndicator?: Node,
-  activityIndicatorProps?: { [prop: string]: mixed },
+  renderActivityIndicator?: (progress: number) => Node,
   enableAnnotationRendering?: boolean,
   enableAntialiasing?: boolean,
   enablePaging?: boolean,
